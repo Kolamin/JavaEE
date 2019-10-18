@@ -6,14 +6,9 @@
 <body>
     <h1>Testing JSP</h1>
     <p>
-        <%@ page import="java.util.Date, logic.TestClass" %>
+        <% String name = request.getParameter("name"); %>
 
-        <% TestClass testClass = new TestClass(); %>
-
-        <%=
-            testClass.getInfo()
-         %>
-
+        <%= "Hello, " + name %>
     </p>
 </body>
 </html>
